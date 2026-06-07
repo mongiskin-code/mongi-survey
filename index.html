@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mongi Skin — Encuesta de Piel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="header">
+    <div class="logo">MONGI <span>SKIN</span></div>
+    <h1 class="header-title">Cuéntanos sobre tu piel.<br><em>Te ayudamos a cuidarla mejor.</em></h1>
+    <p class="header-sub">2 minutos · 10 preguntas · Completamente gratis. Nos ayuda a traer los productos que Colombia realmente necesita.</p>
+  </header>
+
+  <!-- ── PROGRESO ── -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+  <div class="progress-label" id="progressLabel">Pregunta 1 de 10</div>
+
+  <!-- ── ENCUESTA ── -->
+  <main class="survey-wrap">
+
+    <!-- P1: Rango de edad -->
+    <section class="step active" id="s1">
+      <div class="step-num">Pregunta 1 de 10</div>
+      <h2 class="step-q">¿Cuál es tu rango de edad?</h2>
+      <p class="step-hint">Esto nos ayuda a entender qué necesita cada generación.</p>
+      <div class="opts">
+        <button class="opt" data-key="age" data-val="14-17">
+          <span class="opt-icon">🎒</span>
+          <div class="opt-body"><div class="opt-text">14 – 17 años</div><div class="opt-sub">Adolescente, piel en cambio hormonal</div></div>
+        </button>
+        <button class="opt" data-key="age" data-val="18-24">
+          <span class="opt-icon">🎓</span>
+          <div class="opt-body"><div class="opt-text">18 – 24 años</div><div class="opt-sub">Universitaria o primer trabajo</div></div>
+        </button>
+        <button class="opt" data-key="age" data-val="25-34">
+          <span class="opt-icon">💼</span>
+          <div class="opt-body"><div class="opt-text">25 – 34 años</div><div class="opt-sub">Adulto joven</div></div>
+        </button>
+        <button class="opt" data-key="age" data-val="35+">
+          <span class="opt-icon">✨</span>
+          <div class="opt-body"><div class="opt-text">35 años o más</div><div class="opt-sub">Enfocada en antiaging y luminosidad</div></div>
+        </button>
+      </div>
+      <div class="nav-btns">
+        <span></span>
+        <button class="btn-next" data-next="2" disabled>Siguiente →</button>
+      </div>
+    </section>
+
+    <!-- P2: Ciudad -->
+    <section class="step" id="s2">
+      <div class="step-num">Pregunta 2 de 10</div>
+      <h2 class="step-q">¿En qué ciudad vives?</h2>
+      <p class="step-hint">El clima afecta directamente cómo se comporta tu piel.</p>
+      <div class="opts grid2">
+        <button class="opt" data-key="ciudad" data-val="bogota">
+          <span class="opt-icon">🏔️</span>
+          <div class="opt-body"><div class="opt-text">Bogotá</div><div class="opt-sub">Frío y seco</div></div>
+        </button>
+        <button class="opt" data-key="ciudad" data-val="medellin">
+          <span class="opt-icon">🌸</span>
+          <div class="opt-body"><div class="opt-text">Medellín</div><div class="opt-sub">Templado, variable</div></div>
+        </button>
+        <button class="opt" data-key="ciudad" data-val="cali">
+          <span class="opt-icon">☀️</span>
+          <div class="opt-body"><div class="opt-text">Cali</div><div class="opt-sub">Caliente y húmedo</div></div>
+        </button>
+        <button class="opt" data-key="ciudad" data-val="costa">
+          <span class="opt-icon">🏖️</span>
+          <div class="opt-body"><div class="opt-text">Costa / Caribe</div><div class="opt-sub">Muy caliente y húmedo</div></div>
+        </button>
+        <button class="opt" data-key="ciudad" data-val="otra">
+          <span class="opt-icon">📍</span>
+          <div class="opt-body"><div class="opt-text">Otra ciudad</div><div class="opt-sub">Colombia</div></div>
+        </button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back" data-prev="1">← Atrás</button>
+        <button class="btn-next" data-next="3" disabled>Siguiente →</button>
+      </div>
+    </section>
+
+    <!-- P3: Tipo de piel -->
+    <section class="step" id="s3">
+      <div class="step-num">Pregunta 3 de 10</div>
+      <h2 class="step-q">¿Cómo describirías tu piel a las 2 horas de lavarte la cara?</h2>
+      <p class="step-hint">Sin maquillaje ni productos encima.</p>
+      <div class="opts">
+        <button class="opt" data-key="tipo" data-val="grasa">
+          <span class="opt-icon">✨</span>
+          <div class="opt-body"><div class="opt-text">Brillosa en toda la cara</div><div class="opt-sub">Piel grasa — produce mucho sebo en todas partes</div></div>
+        </button>
+        <button class="opt" data-key="tipo" data-val="mixta">
+          <span class="opt-icon">〰️</span>
+          <div class="opt-body"><div class="opt-text">Brillosa solo en frente y nariz, resto normal</div><div class="opt-sub">Piel mixta — zona T grasa, mejillas normales o secas</div></div>
+        </button>
+        <button class="opt" data-key="tipo" data-val="seca">
+          <span class="opt-icon">🏜️</span>
+          <div class="opt-body"><div class="opt-text">Tirante y sin brillo</div><div class="opt-sub">Piel seca — le falta hidratación, puede descamarse</div></div>
+        </button>
+        <button class="opt" data-key="tipo" data-val="sensible">
+          <span class="opt-icon">🔴</span>
+          <div class="opt-body"><div class="opt-text">Con rojeces o irritación</div><div class="opt-sub">Piel sensible — reacciona fácil a productos o clima</div></div>
+        </button>
+        <button class="opt" data-key="tipo" data-val="noSe">
+          <span class="opt-icon">🤷</span>
+          <div class="opt-body"><div class="opt-text">No sé exactamente cuál es mi tipo</div><div class="opt-sub">Nunca lo he determinado bien</div></div>
+        </button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back" data-prev="2">← Atrás</button>
+        <button class="btn-next" data-next="4" disabled>Siguiente →</button>
+      </div>
+    </section>
+
+    <!-- P4: Problemas principales (multi) -->
+    <section class="step" id="s4">
+      <div class="step-num">Pregunta 4 de 10</div>
+      <h2 class="step-q">¿Cuáles son tus principales preocupaciones de piel?</h2>
+      <span class="multi-hint">✔ Puedes elegir varias opciones</span>
+      <div class="opts">
+        <button class="opt multi" data-key="prob" data-val="acne">
+          <span class="opt-icon">🔴</span>
+          <div class="opt-body"><div class="opt-text">Acné activo</div><div class="opt-sub">Granitos, puntos negros, poros tapados</div></div>
+        </button>
+        <button class="opt multi" data-key="prob" data-val="manchas">
+          <span class="opt-icon">🟤</span>
+          <div class="opt-body"><div class="opt-text">Manchas y marcas post-acné</div><div class="opt-sub">Hiperpigmentación, cicatrices oscuras</div></div>
+        </button>
+        <button class="opt multi" data-key="prob" data-val="poros">
+          <span class="opt-icon">🔬</span>
+          <div class="opt-body"><div class="opt-text">Poros grandes o visibles</div><div class="opt-sub">Especialmente en nariz y mejillas</div></div>
+        </button>
+        <button class="opt multi" data-key="prob" data-val="opacidad">
+          <span class="opt-icon">☁️</span>
+          <div class="opt-body"><div class="opt-text">Piel opaca, sin luminosidad</div><div class="opt-sub">Se ve cansada, sin glow</div></div>
+        </button>
+        <button class="opt multi" data-key="prob" data-val="resequedad">
+          <span class="opt-icon">🏜️</span>
+          <div class="opt-body"><div class="opt-text">Resequedad o descamación</div><div class="opt-sub">Piel tirante, especialmente en clima frío</div></div>
+        </button>
+        <button class="opt multi" data-key="prob" data-val="rojeces">
+          <span class="opt-icon">🌹</span>
+          <div class="opt-body"><div class="opt-text">Rojeces e irritación</div><div class="opt-sub">Enrojecimiento frecuente, piel reactiva</div></div>
+        </button>
+        <button class="opt multi" data-key="prob" data-val="antiage">
+          <span class="opt-icon">⏳</span>
+          <div class="opt-body"><div class="opt-text">Líneas finas o pérdida de firmeza</div><div class="opt-sub">Antiaging, colágeno</div></div>
+        </button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back" data-prev="3">← Atrás</button>
+        <button class="btn-next" data-next="5">Siguiente →</button>
+      </div>
+    </section>
+
+    <!-- P5: Productos actuales (multi) -->
+    <section class="step" id="s5">
+      <div class="step-num">Pregunta 5 de 10</div>
+      <h2 class="step-q">¿Qué tipo de productos usas actualmente para el cuidado de tu piel?</h2>
+      <span class="multi-hint">✔ Puedes elegir varias</span>
+      <div class="opts">
+        <button class="opt multi" data-key="prod" data-val="jabonFarm">
+          <span class="opt-icon">🧼</span>
+          <div class="opt-body"><div class="opt-text">Jabón de farmacia o supermercado</div><div class="opt-sub">Neutrogena, Cetaphil, Eucerin, Nivea</div></div>
+        </button>
+        <button class="opt multi" data-key="prod" data-val="creamColom">
+          <span class="opt-icon">🏪</span>
+          <div class="opt-body"><div class="opt-text">Marcas colombianas o locales</div><div class="opt-sub">Yanbal, Esika, Jolie, Lbel</div></div>
+        </button>
+        <button class="opt multi" data-key="prod" data-val="kbeauty">
+          <span class="opt-icon">🇰🇷</span>
+          <div class="opt-body"><div class="opt-text">Ya uso K-beauty / skincare coreano</div><div class="opt-sub">COSRX, Anua, Skin1004, Some By Mi</div></div>
+        </button>
+        <button class="opt multi" data-key="prod" data-val="natural">
+          <span class="opt-icon">🌿</span>
+          <div class="opt-body"><div class="opt-text">Productos naturales o caseros</div><div class="opt-sub">Aceites, aloe vera, remedios caseros</div></div>
+        </button>
+        <button class="opt multi" data-key="prod" data-val="derm">
+          <span class="opt-icon">👩‍⚕️</span>
+          <div class="opt-body"><div class="opt-text">Productos recetados por dermatólogo</div><div class="opt-sub">Retinoide, clindamicina, hidroquinona</div></div>
+        </button>
+        <button class="opt multi" data-key="prod" data-val="nada">
+          <span class="opt-icon">❌</span>
+          <div class="opt-body"><div class="opt-text">No uso nada específico</div><div class="opt-sub">Solo agua o jabón común</div></div>
+        </button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back" data-prev="4">← Atrás</button>
+        <button class="btn-next" data-next="6">Siguiente →</button>
+      </div>
+    </section>
+
+    <!-- P6: Satisfacción con rutina actual -->
+    <section class="step" id="s6">
+      <div class="step-num">Pregunta 6 de 10</div>
+      <h2 class="step-q">¿Qué tan satisfecha estás con los resultados de tu rutina actual?</h2>
+      <p class="step-hint">1 = muy insatisfecha · 5 = muy satisfecha</p>
+      <div class="scale-wrap">
+        <div class="scale-labels">
+          <span>😩 Para nada</span>
+          <span>😊 Muy satisfecha</span>
+        </div>
+        <div class="scale-opts" id="scaleOpts">
+          <div class="scale-opt" data-val="1">1</div>
+          <div class="scale-opt" data-val="2">2</div>
+          <div class="scale-opt" data-val="3">3</div>
+          <div class="scale-opt" data-val="4">4</div>
+          <div class="scale-opt" data-val="5">5</div>
+        </div>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back" data-prev="5">← Atrás</button>
+        <button class="btn-next" data-next="7" disabled>Siguiente →</button>
+      </div>
+    </section>
+
+    <!-- P7: Conocimiento K-beauty -->
+    <section class="step" id="s7">
+      <div class="step-num">Pregunta 7 de 10</div>
+      <h2 class="step-q">¿Cuánto sabes sobre el skincare coreano (K-beauty)?</h2>
+      <div class="opts">
+        <button class="opt" data-key="kbNivel" data-val="nada">
+          <span class="opt-icon">👀</span>
+          <div class="opt-body"><div class="opt-text">Nada, es la primera vez que escucho</div><div class="opt-sub">Curiosa pero sin conocimiento</div></div>
+        </button>
+        <button class="opt" data-key="kbNivel" data-val="poco">
+          <span class="opt-icon">📱</span>
+          <div class="opt-body"><div class="opt-text">Algo — lo he visto en TikTok o redes</div><div class="opt-sub">Conozco algunas marcas pero no he probado</div></div>
+        </button>
+        <button class="opt" data-key="kbNivel" data-val="medio">
+          <span class="opt-icon">🛍️</span>
+          <div class="opt-body"><div class="opt-text">Lo conozco y he probado algún producto</div><div class="opt-sub">Tengo experiencia básica</div></div>
+        </button>
+        <button class="opt" data-key="kbNivel" data-val="experta">
+          <span class="opt-icon">💚</span>
+          <div class="opt-body"><div class="opt-text">Soy fan — ya tengo una rutina coreana</div><div class="opt-sub">Conozco ingredientes, marcas y rutinas</div></div>
+        </button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back" data-prev="6">← Atrás</button>
+        <button class="btn-next" data-next="8" disabled>Siguiente →</button>
+      </div>
+    </section>
+
+    <!-- P8: Barrera de compra (multi) -->
+    <section class="step" id="s8">
+      <div class="step-num">Pregunta 8 de 10</div>
+      <h2 class="step-q">¿Qué te ha impedido comprar skincare coreano antes?</h2>
+      <span class="multi-hint">✔ Puedes elegir varias</span>
+      <div class="opts">
+        <button class="opt multi" data-key="barrera" data-val="precio">
+          <span class="opt-icon">💸</span>
+          <div class="opt-body"><div class="opt-text">El precio — se ve caro</div><div class="opt-sub">No sé si vale la pena invertir</div></div>
+        </button>
+        <button class="opt multi" data-key="barrera" data-val="conseguir">
+          <span class="opt-icon">📦</span>
+          <div class="opt-body"><div class="opt-text">No sé dónde comprarlo en Colombia</div><div class="opt-sub">Solo encuentro en páginas internacionales</div></div>
+        </button>
+        <button class="opt multi" data-key="barrera" data-val="original">
+          <span class="opt-icon">🔍</span>
+          <div class="opt-body"><div class="opt-text">Miedo a comprar productos falsos</div><div class="opt-sub">No sé si son originales</div></div>
+        </button>
+        <button class="opt multi" data-key="barrera" data-val="confuso">
+          <span class="opt-icon">😵</span>
+          <div class="opt-body"><div class="opt-text">Hay demasiados productos, no sé cuál usar</div><div class="opt-sub">La rutina coreana parece complicada</div></div>
+        </button>
+        <button class="opt multi" data-key="barrera" data-val="envio">
+          <span class="opt-icon">⏳</span>
+          <div class="opt-body"><div class="opt-text">El tiempo de envío desde Corea es muy largo</div><div class="opt-sub">Quiero algo que llegue rápido</div></div>
+        </button>
+        <button class="opt multi" data-key="barrera" data-val="ninguna">
+          <span class="opt-icon">✅</span>
+          <div class="opt-body"><div class="opt-text">Ninguna — ya lo compro</div><div class="opt-sub">Ya soy cliente de K-beauty</div></div>
+        </button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back" data-prev="7">← Atrás</button>
+        <button class="btn-next" data-next="9">Siguiente →</button>
+      </div>
+    </section>
+
+    <!-- P9: Presupuesto -->
+    <section class="step" id="s9">
+      <div class="step-num">Pregunta 9 de 10</div>
+      <h2 class="step-q">¿Cuánto estarías dispuesta a gastar mensualmente en skincare?</h2>
+      <p class="step-hint">Solo para entender qué tan importante es el cuidado de piel para ti.</p>
+      <div class="opts">
+        <button class="opt" data-key="budget" data-val="bajo">
+          <span class="opt-icon">💚</span>
+          <div class="opt-body"><div class="opt-text">Menos de $80.000 COP</div><div class="opt-sub">Un producto básico al mes</div></div>
+        </button>
+        <button class="opt" data-key="budget" data-val="medio">
+          <span class="opt-icon">💛</span>
+          <div class="opt-body"><div class="opt-text">$80.000 – $200.000 COP</div><div class="opt-sub">2 a 3 productos por mes</div></div>
+        </button>
+        <button class="opt" data-key="budget" data-val="alto">
+          <span class="opt-icon">🧡</span>
+          <div class="opt-body"><div class="opt-text">$200.000 – $400.000 COP</div><div class="opt-sub">Rutina completa mensual</div></div>
+        </button>
+        <button class="opt" data-key="budget" data-val="premium">
+          <span class="opt-icon">❤️</span>
+          <div class="opt-body"><div class="opt-text">Más de $400.000 COP</div><div class="opt-sub">Mi piel es prioridad, no escatimo</div></div>
+        </button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back" data-prev="8">← Atrás</button>
+        <button class="btn-next" data-next="10" disabled>Siguiente →</button>
+      </div>
+    </section>
+
+    <!-- P10: Producto soñado -->
+    <section class="step" id="s10">
+      <div class="step-num">Pregunta 10 de 10</div>
+      <h2 class="step-q">Si pudieras pedirle a Mongi Skin UN producto o solución específica, ¿cuál sería?</h2>
+      <p class="step-hint">Este campo es libre — escribe lo que quieras. Leemos cada respuesta.</p>
+      <textarea
+        class="free-input"
+        id="wishInput"
+        placeholder="Ej: &quot;Un sérum que quite las manchas del acné sin resecar&quot; o &quot;El protector solar coreano que vi en TikTok que no deja residuo blanco&quot;..."
+      ></textarea>
+      <div class="nav-btns">
+        <button class="btn-back" data-prev="9">← Atrás</button>
+        <div style="display:flex; gap:12px; align-items:center;">
+          <button class="btn-skip" id="btnSkip">Omitir</button>
+          <button class="btn-next" id="btnFinish">Finalizar ✓</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RESULTADO ── -->
+    <div class="result-wrap" id="resultWrap">
+      <div class="result-icon">🌿</div>
+      <div class="result-title">¡Gracias por<br><em>contarnos sobre tu piel!</em></div>
+      <p class="result-desc">Cada respuesta nos ayuda a traer exactamente los productos que Colombia necesita. Pronto Mongi Skin tendrá la rutina perfecta para ti.</p>
+
+      <div class="result-card">
+        <div class="result-card-label">¿Qué sigue?</div>
+        <div class="result-card-text">
+          📱 Síguenos en <strong>@mongiskin</strong> en TikTok e Instagram para ser de los primeros en conocer los productos que traemos.<br><br>
+          💬 Escríbenos al WhatsApp para recibir una <strong>rutina personalizada gratis</strong> según tu tipo de piel.<br><br>
+          🎁 Las primeras 50 personas en completar esta encuesta recibirán un <strong>descuento exclusivo</strong> en su primer pedido.
+        </div>
+      </div>
+
+      <button class="result-cta" id="btnCta">Seguir @mongiskin</button>
+    </div>
+
+  </main>
+
+  <script src="survey.js"></script>
+</body>
+</html>
