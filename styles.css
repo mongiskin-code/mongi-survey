@@ -196,7 +196,7 @@ body {
 
 .opt:hover {
   border-color: var(--sage);
-  background: var(--sage-pal);
+
 }
 
 .opt.selected {
