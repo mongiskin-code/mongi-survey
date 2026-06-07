@@ -187,6 +187,11 @@ body {
   background: var(--white);
   text-align: left;
   width: 100%;
+  /* Fix: prevents iOS from swallowing the tap as a scroll gesture,
+     which caused multi-select toggle to not fire on first touch */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .opt:hover {

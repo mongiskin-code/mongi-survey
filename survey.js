@@ -15,8 +15,8 @@
    ───────────────────────────────────────── */
 
 /* ── SUPABASE CONFIG (placeholder) ── */
-const SUPABASE_URL = 'https://pewoiqeduyaafggfkbir.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_2rCvV_5vrkNo4R_AYHhshg_u10RhhVr';
+const SUPABASE_URL = 'https://YOUR_PROJECT.supabase.co';
+const SUPABASE_KEY = 'YOUR_ANON_PUBLIC_KEY';
 const TABLE_NAME   = 'survey_responses';
 
 /* ── STATE ── */
@@ -26,7 +26,7 @@ const state = {
   wish:         '',   // free-text field (P10)
 };
 
-const TOTAL_STEPS = 10;
+const TOTAL_STEPS = 11;
 
 /* ══════════════════════════════════════════
    NAVIGATION
@@ -157,12 +157,13 @@ async function submitSurvey() {
 function buildPayload() {
   return {
     // Single-select
-    age:          state.answers.age         ?? null,
-    ciudad:       state.answers.ciudad      ?? null,
-    tipo_piel:    state.answers.tipo        ?? null,
-    kb_nivel:     state.answers.kbNivel     ?? null,
+    age:          state.answers.age          ?? null,
+    ciudad:       state.answers.ciudad       ?? null,
+    tipo_piel:    state.answers.tipo         ?? null,
+    kb_nivel:     state.answers.kbNivel      ?? null,
     satisfaccion: state.answers.satisfaccion ?? null,
-    budget:       state.answers.budget      ?? null,
+    budget:       state.answers.budget       ?? null,
+    frecuencia:   state.answers.frecuencia   ?? null,
 
     // Multi-select (arrays)
     prob_piel:    state.multiAnswers.prob    ?? [],
